@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"
+    <title>水星记账</title>
+    <link rel="stylesheet" href="button.css">
+  </head>
+
+  <body>
+
+  <div>
+    <h1>水星记账</h1>
+    <h2>本月生活费共2000元</h2>
+
+    <button onclick="myFunction()">开始记账</button>
+    <button onclick="myFunction2()">打印账单</button>
+    <h2 id="sad">本月生活费仅剩？元</h2>
+  </div>
+
+
+<script type="text/javascript">
+function myFunction(){
+      var money = 2000;
+       while(true){
+       var put =prompt('开始记录你的收支情况吧~：\n 1、收入\n 2、支出 \n3、显示余额 \n4、退出');
+       if (put == 1){
+           var enter = prompt('请输入你的收入:');
+           money += parseInt(enter);
+           alert('本月余额:'+money);
+       }
+       if (put == 2){
+           var out = prompt('请输入你的支出:');
+           money -= parseInt(out);
+           alert('本月余额:'+money);
+       }
+       if (put == 3){
+           alert('本月余额:'+money);
+       }
+       if (put == 4){
+           alert('正在退出');
+           break;
+       }
+     }}
+
+
+function myFunction2(){
+
+document.getElementById("sad").innerHTML="账单打印功能仍在开发中..."
+
+}
+
+</script>
+
+</body>
